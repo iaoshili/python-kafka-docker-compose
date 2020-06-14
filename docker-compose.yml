@@ -1,13 +1,13 @@
 version: '3'
 services:
-  app:
-    container_name: app
+  demo:
+    container_name: demo
     build:
-      context: ./app
+      context: ./demo
       dockerfile: Dockerfile
     entrypoint: ["tail", "-f", "/dev/null"]
     volumes:
-      - './app:/app'
+      - './demo:/demo'
     depends_on:
       - zookeeper
       - kafka
