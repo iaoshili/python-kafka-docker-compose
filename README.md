@@ -6,6 +6,7 @@
 - docker exec -it demo python consumer.py
 - docker exec -it demo python producer.py
 
+
 ## Command line CLI
 - `docker exec -it kafka bash`
 - `cd $KAFKA_HOME/bin`
@@ -20,9 +21,12 @@ Topic:
 
 Producer: kafka-console-producer.sh --broker-list kafka:9093 --topic first_topic
 
+Consumer: kafka-console-consumer.sh --bootstrap-server kafka:9092 --topic first_topic --from-beginning
 
+## Other kafka compose
+https://github.com/simplesteph/kafka-stack-docker-compose
 
-Reference:
+## Reference:
 - https://medium.com/big-data-engineering/hello-kafka-world-the-complete-guide-to-kafka-with-docker-and-python-f788e2588cfc
 - http://wurstmeister.github.io/kafka-docker/
 - https://kafka-python.readthedocs.io/en/master/apidoc/KafkaProducer.html
